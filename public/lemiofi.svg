@@ -1,0 +1,82 @@
+<svg width="800" height="960" viewBox="0 0 800 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141419" />
+      <stop offset="50%" stop-color="#0e0e12" />
+      <stop offset="100%" stop-color="#08080a" />
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#9e6945" />
+      <stop offset="100%" stop-color="#734526" />
+    </linearGradient>
+    <linearGradient id="sweaterGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#80858e" />
+      <stop offset="100%" stop-color="#555a63" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#0a0a0c" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="960" fill="url(#bgGrad)" />
+  <rect width="800" height="960" fill="url(#grid)" />
+  <rect width="800" height="960" fill="url(#glow)" />
+
+  <!-- Architectural Background Elements -->
+  <rect x="120" y="80" width="160" height="800" fill="rgba(255,255,255,0.02)" />
+  <rect x="520" y="80" width="160" height="800" fill="rgba(255,255,255,0.02)" />
+
+  <!-- Body / Sweater -->
+  <path d="M 180 960 Q 190 620 400 620 Q 610 620 620 960 Z" fill="url(#sweaterGrad)" />
+  
+  <!-- Shirt Collar -->
+  <path d="M 330 620 L 400 710 L 310 650 Z" fill="#1e293b" />
+  <path d="M 470 620 L 400 710 L 490 650 Z" fill="#1e293b" />
+  <path d="M 360 620 L 400 680 L 440 620 Z" fill="#0f172a" />
+
+  <!-- Neck -->
+  <rect x="360" y="470" width="80" height="150" fill="url(#skinGrad)" rx="10" />
+  
+  <!-- Face -->
+  <path d="M 290 320 Q 290 530 400 530 Q 510 530 510 320 Q 510 220 400 210 Q 290 220 290 320 Z" fill="url(#skinGrad)" />
+
+  <!-- Beard -->
+  <path d="M 300 360 Q 300 520 400 535 Q 500 520 500 360 Q 508 440 480 490 Q 440 540 400 540 Q 360 540 320 490 Q 292 440 300 360 Z" fill="#171412" />
+
+  <!-- Hair -->
+  <path d="M 275 290 Q 260 170 400 160 Q 540 170 525 290 Q 510 190 400 185 Q 290 190 275 290 Z" fill="#12100e" />
+  <!-- Hair curls texture -->
+  <circle cx="320" cy="190" r="22" fill="#1c1917" />
+  <circle cx="360" cy="175" r="24" fill="#1c1917" />
+  <circle cx="400" cy="170" r="25" fill="#1c1917" />
+  <circle cx="440" cy="175" r="24" fill="#1c1917" />
+  <circle cx="480" cy="190" r="22" fill="#1c1917" />
+
+  <!-- Eyes -->
+  <ellipse cx="350" cy="330" rx="14" ry="9" fill="#ffffff" />
+  <circle cx="350" cy="330" r="6" fill="#2d1b0e" />
+  <ellipse cx="450" cy="330" rx="14" ry="9" fill="#ffffff" />
+  <circle cx="450" cy="330" r="6" fill="#2d1b0e" />
+
+  <!-- Eyebrows -->
+  <path d="M 330 310 Q 355 302 375 312" stroke="#12100e" stroke-width="7" stroke-linecap="round" fill="none" />
+  <path d="M 425 312 Q 445 302 470 310" stroke="#12100e" stroke-width="7" stroke-linecap="round" fill="none" />
+
+  <!-- Nose -->
+  <path d="M 400 330 L 392 390 L 408 390 Z" fill="#693d20" opacity="0.6" />
+
+  <!-- Lips -->
+  <path d="M 370 440 Q 400 450 430 440" stroke="#522f17" stroke-width="5" stroke-linecap="round" fill="none" />
+
+  <!-- Overlay Watermark / Tag -->
+  <g transform="translate(60, 840)">
+    <rect width="260" height="48" rx="24" fill="#0a0a0c" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+    <circle cx="28" cy="24" r="6" fill="#ccff00" />
+    <text x="48" y="30" fill="#f4f0ea" font-family="Inter, sans-serif" font-weight="600" font-size="14" letter-spacing="1">LEMIOFI CHALCHISA</text>
+  </g>
+</svg>
