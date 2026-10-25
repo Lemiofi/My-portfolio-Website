@@ -23,41 +23,41 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
     <main className="min-h-screen bg-[#0a0a0c] text-cream-100 selection:bg-accent-lime selection:text-[#0a0a0c]">
       <Navbar />
 
-      <article className="pt-36 pb-24 max-w-4xl mx-auto px-6 md:px-12">
+      <article className="pt-28 sm:pt-36 pb-16 sm:pb-24 max-w-4xl mx-auto px-4 sm:px-6 md:px-12">
         <Link
           href="/#work"
-          className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-cream-400 hover:text-accent-lime transition-colors mb-8"
+          className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-cream-400 hover:text-accent-lime transition-colors mb-6 sm:mb-8"
         >
           <ArrowLeft className="w-4 h-4" /> BACK TO SELECTED WORK
         </Link>
 
         {/* Header */}
-        <div className="flex flex-col gap-4 border-b border-white/10 pb-8 mb-10">
-          <div className="flex flex-wrap items-center gap-3">
-            <span className="px-3.5 py-1 rounded-full text-xs font-mono uppercase bg-accent-lime/10 text-accent-lime border border-accent-lime/20 font-bold">
+        <div className="flex flex-col gap-3 sm:gap-4 border-b border-white/10 pb-6 sm:pb-8 mb-8 sm:mb-10">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+            <span className="px-3 sm:px-3.5 py-1 rounded-full text-[11px] sm:text-xs font-mono uppercase bg-accent-lime/10 text-accent-lime border border-accent-lime/20 font-bold">
               {project.category}
             </span>
-            <span className="text-xs font-mono text-cream-400 flex items-center gap-1">
+            <span className="text-[11px] sm:text-xs font-mono text-cream-400 flex items-center gap-1">
               <Calendar className="w-3.5 h-3.5" /> {project.year}
             </span>
-            <span className="text-xs font-mono text-cream-400 flex items-center gap-1">
+            <span className="text-[11px] sm:text-xs font-mono text-cream-400 flex items-center gap-1">
               <Users className="w-3.5 h-3.5 text-accent-cyan" /> {project.team}
             </span>
           </div>
 
-          <h1 className="font-display font-extrabold text-4xl sm:text-6xl uppercase tracking-tight text-cream-100 leading-tight">
+          <h1 className="font-display font-extrabold text-[clamp(1.75rem,5vw,3.75rem)] uppercase tracking-tight text-cream-100 leading-tight break-words">
             {project.title}
           </h1>
 
-          <p className="text-cream-300 text-lg md:text-xl font-light leading-relaxed pt-2">
+          <p className="text-cream-300 text-base sm:text-lg md:text-xl font-light leading-relaxed pt-1 sm:pt-2">
             {project.subtitle}
           </p>
         </div>
 
         {/* Metadata Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-5 rounded-2xl bg-white/[0.03] border border-white/10 mb-12 font-mono text-xs">
+        <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 p-4 sm:p-5 rounded-2xl bg-white/[0.03] border border-white/10 mb-8 sm:mb-12 font-mono text-xs">
           <div>
-            <span className="text-cream-500 uppercase block mb-1">Role</span>
+            <span className="text-cream-500 uppercase block mb-0.5 text-[10px] sm:text-xs">Role</span>
             <span className="text-cream-100 font-semibold">{project.role}</span>
           </div>
           <div>

@@ -28,30 +28,30 @@ export default function ArticlesPage() {
     <main className="min-h-screen bg-[#0a0a0c] text-neutral-100 selection:bg-neutral-300 selection:text-[#0a0a0c]">
       <Navbar />
 
-      <div className="pt-36 pb-24 max-w-7xl mx-auto px-6 md:px-12">
+      <div className="pt-28 sm:pt-36 pb-16 sm:pb-24 max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
         {/* Header */}
-        <div className="flex flex-col gap-4 border-b border-white/10 pb-12 mb-12">
+        <div className="flex flex-col gap-3 sm:gap-4 border-b border-white/10 pb-8 sm:pb-12 mb-8 sm:mb-12">
           <span className="text-xs uppercase font-mono tracking-widest text-neutral-400 font-bold">
             03 — INSIGHTS & THOUGHTS
           </span>
-          <h1 className="font-display font-extrabold text-5xl sm:text-7xl uppercase tracking-tight text-neutral-100">
+          <h1 className="font-display font-extrabold text-[clamp(1.85rem,5vw,4.5rem)] uppercase tracking-tight text-neutral-100">
             ARTICLES & WRITING
           </h1>
-          <p className="text-neutral-400 text-base md:text-lg font-light max-w-2xl">
+          <p className="text-neutral-400 text-sm sm:text-base md:text-lg font-light max-w-2xl">
             Exploring the intersection of Software Engineering, Web Development, Artificial Intelligence, Freelancing, and Digital Marketing Strategy.
           </p>
         </div>
 
         {/* Category Filters */}
-        <div className="flex flex-wrap items-center gap-3 mb-12">
-          <span className="text-xs font-mono text-neutral-500 uppercase flex items-center gap-1 mr-2">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-8 sm:mb-12">
+          <span className="text-xs font-mono text-neutral-500 uppercase flex items-center gap-1 mr-1 sm:mr-2 w-full sm:w-auto mb-1 sm:mb-0">
             <Filter className="w-3.5 h-3.5" /> Filter by Category:
           </span>
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-2 rounded-full text-xs font-mono transition-all ${
+              className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-mono transition-all ${
                 selectedCategory === cat
                   ? "bg-neutral-200 text-[#0a0a0c] font-bold shadow-lg"
                   : "bg-white/5 text-neutral-300 border border-white/10 hover:bg-white/10"

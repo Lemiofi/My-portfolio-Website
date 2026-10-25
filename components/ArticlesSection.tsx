@@ -10,25 +10,25 @@ export default function ArticlesSection() {
   const featuredArticles = ARTICLES.slice(0, 3);
 
   return (
-    <section id="articles" className="py-24 md:py-36 bg-[#0a0a0c] relative border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <section id="articles" className="py-16 sm:py-24 md:py-36 bg-[#0a0a0c] relative border-t border-white/5">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-16 gap-4 sm:gap-6">
           <div>
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-3 mb-3 sm:mb-4">
               <span className="text-xs uppercase font-mono tracking-widest text-neutral-400 font-bold">
                 03 — WRITING
               </span>
-              <div className="h-[1px] w-16 bg-neutral-600" />
+              <div className="h-[1px] w-12 sm:w-16 bg-neutral-600" />
             </div>
-            <h2 className="font-display font-extrabold text-5xl sm:text-7xl uppercase tracking-tight text-neutral-100">
+            <h2 className="font-display font-extrabold text-[clamp(1.85rem,5vw,4.5rem)] uppercase tracking-tight text-neutral-100">
               IDEAS & ARTICLES
             </h2>
           </div>
           <Link
             href="/articles"
-            className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-neutral-400 hover:text-white transition-colors group"
+            className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-neutral-400 hover:text-white transition-colors group w-fit"
           >
             <span>VIEW ALL ARTICLES ({ARTICLES.length})</span>
             <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -36,7 +36,7 @@ export default function ArticlesSection() {
         </div>
 
         {/* Article Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {featuredArticles.map((article, idx) => (
             <motion.div
               key={article.slug}
@@ -47,32 +47,32 @@ export default function ArticlesSection() {
             >
               <Link
                 href={`/articles/${article.slug}`}
-                className="group flex flex-col justify-between h-full p-8 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-white/30 hover:bg-white/[0.04] transition-all duration-300 relative overflow-hidden"
+                className="group flex flex-col justify-between h-full p-5 sm:p-7 md:p-8 rounded-2xl sm:rounded-3xl bg-white/[0.02] border border-white/10 hover:border-white/30 hover:bg-white/[0.04] active:scale-[0.99] transition-all duration-300 relative overflow-hidden"
               >
                 <div>
                   {/* Category & Date */}
-                  <div className="flex items-center justify-between gap-2 mb-6 text-xs font-mono">
-                    <span className="px-3 py-1 rounded-full bg-white/10 text-neutral-200 border border-white/15 font-bold uppercase">
+                  <div className="flex items-center justify-between gap-2 mb-4 sm:mb-6 text-[11px] sm:text-xs font-mono">
+                    <span className="px-3 py-1 rounded-full bg-white/10 text-neutral-200 border border-white/15 font-bold uppercase truncate max-w-[170px] sm:max-w-none">
                       {article.category}
                     </span>
-                    <span className="text-neutral-500 flex items-center gap-1">
+                    <span className="text-neutral-500 flex items-center gap-1 shrink-0">
                       <Clock className="w-3.5 h-3.5" /> {article.readTime}
                     </span>
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-display font-bold text-xl md:text-2xl uppercase tracking-tight text-neutral-100 group-hover:text-white transition-colors leading-snug mb-3">
+                  <h3 className="font-display font-bold text-lg sm:text-xl md:text-2xl uppercase tracking-tight text-neutral-100 group-hover:text-white transition-colors leading-snug mb-2 sm:mb-3">
                     {article.title}
                   </h3>
 
                   {/* Excerpt */}
-                  <p className="text-xs md:text-sm text-neutral-400 font-light leading-relaxed">
+                  <p className="text-xs sm:text-sm text-neutral-400 font-light leading-relaxed">
                     {article.excerpt}
                   </p>
                 </div>
 
                 {/* Footer Metadata */}
-                <div className="mt-8 pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-neutral-500">
+                <div className="mt-6 sm:mt-8 pt-3 sm:pt-4 border-t border-white/10 flex items-center justify-between text-[11px] sm:text-xs font-mono text-neutral-500">
                   <span className="flex items-center gap-1">
                     <Calendar className="w-3.5 h-3.5 text-neutral-400" /> {article.date}
                   </span>

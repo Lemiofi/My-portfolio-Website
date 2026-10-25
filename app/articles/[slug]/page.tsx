@@ -23,34 +23,34 @@ export default function ArticleDetailPage({ params }: { params: { slug: string }
     <main className="min-h-screen bg-[#0a0a0c] text-neutral-100 selection:bg-neutral-300 selection:text-[#0a0a0c]">
       <Navbar />
 
-      <article className="pt-36 pb-24 max-w-4xl mx-auto px-6 md:px-12">
+      <article className="pt-28 sm:pt-36 pb-16 sm:pb-24 max-w-4xl mx-auto px-4 sm:px-6 md:px-12">
         {/* Back Link */}
         <Link
           href="/articles"
-          className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-neutral-400 hover:text-white transition-colors mb-8"
+          className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-neutral-400 hover:text-white transition-colors mb-6 sm:mb-8"
         >
           <ArrowLeft className="w-4 h-4" /> BACK TO ALL ARTICLES
         </Link>
 
         {/* Header */}
-        <div className="flex flex-col gap-4 border-b border-white/10 pb-8 mb-10">
-          <div className="flex items-center gap-3">
-            <span className="px-3.5 py-1 rounded-full text-xs font-mono uppercase bg-white/10 text-neutral-200 border border-white/15 font-bold">
+        <div className="flex flex-col gap-3 sm:gap-4 border-b border-white/10 pb-6 sm:pb-8 mb-8 sm:mb-10">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+            <span className="px-3 sm:px-3.5 py-1 rounded-full text-[11px] sm:text-xs font-mono uppercase bg-white/10 text-neutral-200 border border-white/15 font-bold">
               {article.category}
             </span>
-            <span className="text-xs font-mono text-neutral-500 flex items-center gap-1">
+            <span className="text-[11px] sm:text-xs font-mono text-neutral-500 flex items-center gap-1">
               <Clock className="w-3.5 h-3.5" /> {article.readTime}
             </span>
-            <span className="text-xs font-mono text-neutral-500 flex items-center gap-1">
+            <span className="text-[11px] sm:text-xs font-mono text-neutral-500 flex items-center gap-1">
               <Calendar className="w-3.5 h-3.5" /> {article.date}
             </span>
           </div>
 
-          <h1 className="font-display font-extrabold text-3xl sm:text-5xl md:text-6xl uppercase tracking-tight text-neutral-100 leading-tight">
+          <h1 className="font-display font-extrabold text-[clamp(1.75rem,5vw,3.75rem)] uppercase tracking-tight text-neutral-100 leading-tight break-words">
             {article.title}
           </h1>
 
-          <p className="text-neutral-300 text-lg md:text-xl font-light italic leading-relaxed pt-2">
+          <p className="text-neutral-300 text-base sm:text-lg md:text-xl font-light italic leading-relaxed pt-1 sm:pt-2">
             &ldquo;{article.excerpt}&rdquo;
           </p>
         </div>

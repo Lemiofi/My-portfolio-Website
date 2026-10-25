@@ -14,15 +14,19 @@
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
   background-color: #0a0a0c;
   color: #f4f0ea;
   font-family: var(--font-inter), sans-serif;
+  max-width: 100%;
   overflow-x: hidden;
-  selection-background-color: #d4d4d8;
-  selection-color: #0a0a0c;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 ::selection {
